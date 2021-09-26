@@ -10,7 +10,7 @@
                 </li>
 
                  <li>
-                    <a href="#">COMICS</a>
+                    <a href="#" class="active">COMICS</a>
                 </li>
 
                  <li>
@@ -84,6 +84,11 @@ li a{
     padding: 20px;
     text-decoration: none;
     font-weight: 600;
+}
+
+.active{
+    color: $primaryColor;
+    border-bottom: 3px solid $primaryColor;
 }
 
 
