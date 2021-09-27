@@ -2,9 +2,13 @@
 <template>
     <main>
 <!-- Content goes here -->
+        
         <section class="main-1">
-            <h1>-- Content goes here --</h1>
+            <div class="film-elements">
+                <FilmSeries />
+            </div>
         </section>
+
 
 <!-- List icon main -->
         <section class="main-2">
@@ -42,8 +46,22 @@
 </template>
 
 <script>
+
+import FilmSeries from "../data/filmElements";
+import filmElements from "../data/filmElements.js"
+
 export default {
-    name: "Main",
+
+    props: ["title"],
+
+    components: {
+    FilmSeries,
+    },
+    data: function (){
+        return {
+            filmElements
+        }
+    }
 }
 </script>
 

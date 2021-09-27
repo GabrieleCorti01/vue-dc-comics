@@ -4,10 +4,8 @@
         <img src="../assets/vue-dc-comics-1/img/dc-logo.png" alt="">
     <!-- Navbar -->
         <nav>
-            <ul >
-                <li class="products">
-                    <a href="#">CHARACTERS</a>
-                </li>
+            <ul>
+
 
                  <li>
                     <a href="#" class="active">COMICS</a>
@@ -59,9 +57,9 @@ import HeaderNav from "./HeaderNav.vue";
 
 export default {
     name: "Header",
-    components : {
-        HeaderNav,
-    },
+    // components : {
+    //     HeaderNav,
+    // },
     
     data: function(){
         return{
