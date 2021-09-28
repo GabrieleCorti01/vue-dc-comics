@@ -1,14 +1,15 @@
 
 <template>
     <div class="film-element">
-        <h3>Ciao</h3>
+        <h3>{{ title }}</h3>
     </div>
 </template>
 
 
 <script>
 export default {
-    
+    name: 'FilmObject',
+    props: ["title"],
 }
 </script>
 

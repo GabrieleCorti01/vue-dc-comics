@@ -5,7 +5,7 @@
         
         <section class="main-1">
             <div class="film-elements">
-                <FilmSeries />
+                <FilmSeries v-for="(element, index) in filmElements" :key="index" :title="filmElements.series"/>
             </div>
         </section>
 
@@ -47,19 +47,19 @@
 
 <script>
 
-import FilmSeries from "../data/filmElements";
+import FilmSeries from "./FilmSeries.vue";
 import filmElements from "../data/filmElements.js"
 
 export default {
 
-    props: ["title"],
+    name: 'Products',
 
     components: {
     FilmSeries,
     },
     data: function (){
         return {
-            filmElements
+            filmElements,
         }
     }
 }
