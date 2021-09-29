@@ -1,14 +1,22 @@
 
 <template>
     <main>
-<!-- Content goes here -->
-        
-        <section class="main-1">
-            <div class="film-elements">
-                <FilmSeries v-for="(element, index) in filmElements" :key="index" :title="filmElements.series"/>
-            </div>
+
+<!-- Jumbotron image -->
+        <section class="jumbotron-img">
+
         </section>
 
+<!-- Content goes here -->  
+        <section class="main-1">
+            <div class="container-film">
+                <FilmSeries v-for="(element, index) in filmElements" :key="index" :title="element.series" :src="element.thumb"/>
+            </div>
+
+            <div class="container-button-load">
+                <input type="button" value="SIGN-UP NOW!" class="button-load-more" onclick="msg()"> 
+            </div>
+        </section>
 
 <!-- List icon main -->
         <section class="main-2">
@@ -72,15 +80,38 @@ main{
     background-color: $secondaryColor;
 }
 
+.jumbotron-img{
+    height: 450px;
+    background-image: url(../assets/vue-dc-comics-1/img/jumbotron.jpg);
+}
+
 .main-1{
     padding: 30px;
     color: $thirdColor;
+}
+
+.container-film{
+    flex-wrap: wrap;
     display: flex;
-    align-items: center;
+    padding: 20px;
 }
 
 h1{
     font-weight: 600;
+}
+
+.container-button-load{
+    display: flex;
+    justify-content: center;
+}
+
+.button-load-more{
+    padding: 10px 40px;
+    border: none;
+    background-color: $primaryColor;
+    color: $thirdColor;
+    font-weight: 600;
+    font-size: 0.9em;
 }
 
 .main-2{
